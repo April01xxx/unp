@@ -1,0 +1,18 @@
+# object files
+*.o
+
+# libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# shared objects
+*.so
+*.dll
+*.dylib
+*.so.*
+
+# others
+[mM]ake*
+unpv13e
