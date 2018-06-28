@@ -26,10 +26,10 @@ main(int argc, char *argv[])
   for ( ; ; ) {
     clilen = sizeof(cliaddr);
     if ((connfd = accept(listenfd, (SA *)&cliaddr, &clilen)) < 0) {
-    if (errno == EINTR)
-      continue;
-    else
-      err_sys("accept error");
+      if (errno == EINTR)
+        continue;
+      else
+        err_sys("accept error");
     }
 
     if ((childpid = Fork()) == 0) {
