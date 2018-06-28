@@ -28,3 +28,13 @@ readn(int fd, void *vptr, size_t n)
   }
   return n-nleft;
 }
+
+ssize_t
+Readn(int fd, void *ptr, size_t nbytes)
+{
+  ssize_t n;
+
+  if ((n = readn(fd, ptr, nbytes)) < 0)
+    err_sys("readn error");
+  return n;
+}
