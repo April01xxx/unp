@@ -9,7 +9,7 @@ main(int argc, char *argv[])
   if (argc != 2)
     err_quit("usage: tcpcli <IPaddress>");
 
-  for (i = 0; i < 5; ++i) {
+  for (i = 0; i < 1; ++i) {
     sockfd[i] = Socket(AF_INET, SOCK_STREAM, 0);
 
     bzero(&servaddr, sizeof(servaddr));
